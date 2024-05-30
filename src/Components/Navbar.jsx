@@ -11,7 +11,7 @@ const Navbar = () => {
 <button className="capitalize pr-4">login</button>
      </Link>
      <Link to='/singup'>
-<button className="capitalize pr-4 px-6 py-2 rounded cursor-pointer">signup</button>
+<button className="capitalize bg-red-600 px-6 py-2 rounded cursor-pointer">signup</button>
      </Link>
     </div>
   )
