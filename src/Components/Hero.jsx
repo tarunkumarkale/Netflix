@@ -9,7 +9,7 @@ const Hero = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(endpoints.popular);
-        console.log(response);
+        console.log(response.data.results);
         const movies = response.data.results;
         const randomMovie = movies[Math.floor(Math.random() * movies.length)];
         console.log(randomMovie.title);
@@ -22,8 +22,21 @@ const Hero = () => {
     fetchData();
   }, []);
 
+
+if(!movie){
+  return<div>
+    loading ....
+  </div>
+}
+
+const {title,backdrop_path,release_date,overview}=movie
   return (
-    <div>
+    <div className='w-full h-[550px]  lg:h-[850px]'>
+    <div className='w-full h-full'>
+      <div className='absolute w-full h-[550px] lg:h-[850px] bg-gradient-to-r from-black'>
+        <img src={`https://image.tmdb.org/t/p/original/${backdrop_path}`} className='w-full h-full object-fill object-top' alt={title} />
+      </div>
+    </div>
    
     </div>
   );
