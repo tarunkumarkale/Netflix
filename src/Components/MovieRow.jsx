@@ -1,9 +1,9 @@
 import React from 'react'
 
-const MovieRow = () => {
+const MovieRow = ({title,url}) => {
   return (
     <div>
-      <h1>moview row</h1>
+      
     </div>
   )
 }
